@@ -123,7 +123,8 @@ def get_cost(G1,G2,i,j):
             edgelist2=sorted(type_map2[k],key=lambda x:G2[j][x]["weight"],reverse=True)
             #map in order of sorted lists
             for l in range(n):
-                difference+=(max(G1[i][edgelist1[l]]["weight"],G2[j][edgelist2[l]]["weight"])-min(G1[i][edgelist1[l]]["weight"],G2[j][edgelist2[l]]["weight"]))/2
+                difference+=(max(G1[i][edgelist1[l]]["weight"],G2[j][edgelist2[l]]["weight"])
+                            -min(G1[i][edgelist1[l]]["weight"],G2[j][edgelist2[l]]["weight"]))/2
             #cost for not mapped edges
             if len(edgelist1)>n:
                 for l in range(n,len(edgelist1)):
