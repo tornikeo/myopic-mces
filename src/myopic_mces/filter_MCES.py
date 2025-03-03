@@ -165,7 +165,7 @@ def filter2(G1,G2):
             atom_types1.append(G1.nodes[i]["atom"])
 
     atom_types2=[]
-    for i in G2.nodes:
+    for i in G2.nodes: 
         if G2.nodes[i]["atom"] not in atom_types2:
             atom_types2.append(G2.nodes[i]["atom"])
 
